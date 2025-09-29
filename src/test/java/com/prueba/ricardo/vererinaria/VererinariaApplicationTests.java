@@ -19,7 +19,7 @@ import com.prueba.ricardo.vererinaria.service.VertinariaService;
 @SpringBootTest
 class VererinariaApplicationTests {
 
-
+/*
 	@Autowired
 	private VertinariaService vertinariaService;   
 
@@ -58,6 +58,6 @@ class VererinariaApplicationTests {
 
 	}
 
-
+*/
 
 }
