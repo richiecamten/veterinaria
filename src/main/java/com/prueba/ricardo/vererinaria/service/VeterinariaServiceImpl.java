@@ -26,10 +26,10 @@ public class VeterinariaServiceImpl  implements VertinariaService {
     @Autowired
     private  CitaEntRepository citaEntRepository;
 
-    @Value("${veterinaria.app}")
+    @Value("${VETERINARIA_APP}")
     private String app;
 
-    @Value("${veterinaria.key}")
+    @Value("${VETERINARIA_KEY}")
     private String key;
     
 
