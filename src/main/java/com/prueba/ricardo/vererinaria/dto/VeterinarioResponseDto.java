@@ -10,9 +10,10 @@ public class VeterinarioResponseDto {
     }
     
     private String id;
-
-    public VeterinarioResponseDto(String id) {
+    private String message;
+    public VeterinarioResponseDto(String id,String message) {
         this.id = id;
+        this.message = message;
     }
 
     
