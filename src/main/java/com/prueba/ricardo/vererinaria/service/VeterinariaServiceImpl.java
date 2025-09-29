@@ -15,6 +15,7 @@ import com.prueba.ricardo.vererinaria.persistence.entity.PropiertarioEnt;
 import com.prueba.ricardo.vererinaria.persistence.entity.VeterinarioEnt;
 import com.prueba.ricardo.vererinaria.persistence.repository.CitaEntRepository;
 import com.prueba.ricardo.vererinaria.persistence.repository.VeterinarioRepository;
+import org.springframework.beans.factory.annotation.Value;
 
 @Service
 public class VeterinariaServiceImpl  implements VertinariaService {
@@ -25,6 +26,12 @@ public class VeterinariaServiceImpl  implements VertinariaService {
     @Autowired
     private  CitaEntRepository citaEntRepository;
 
+    @Value("${veterinaria.app}")
+    private String app;
+
+    @Value("${veterinaria.key}")
+    private String key;
+    
 
     @Override
     public VeterinarioResponseDto newVeterinario(VeterinarioDto veterinarioDto) {
@@ -33,7 +40,7 @@ public class VeterinariaServiceImpl  implements VertinariaService {
         {      
             ModelMapper mapper = new ModelMapper();      
             return  new  VeterinarioResponseDto(this.veterinarioRepository.save( 
-                    mapper.map(veterinarioDto, VeterinarioEnt.class) ).getCedula());
+                    mapper.map(veterinarioDto, VeterinarioEnt.class) ).getCedula() , " * Message  * " );
 
         }
         catch (Exception e)
