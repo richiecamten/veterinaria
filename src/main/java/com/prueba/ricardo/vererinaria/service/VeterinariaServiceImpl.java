@@ -46,7 +46,7 @@ public class VeterinariaServiceImpl  implements VertinariaService {
         catch (Exception e)
         {
             e.printStackTrace();
-            return  new  VeterinarioResponseDto("ERROR");
+            return  new  VeterinarioResponseDto("ERROR","");
         }
 
     }
