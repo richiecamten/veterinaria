@@ -40,7 +40,7 @@ public class VeterinariaServiceImpl  implements VertinariaService {
         {      
             ModelMapper mapper = new ModelMapper();      
             return  new  VeterinarioResponseDto(this.veterinarioRepository.save( 
-                    mapper.map(veterinarioDto, VeterinarioEnt.class) ).getCedula() , " * Message  * " );
+                    mapper.map(veterinarioDto, VeterinarioEnt.class) ).getCedula() , app + " * Message  * " + key );
 
         }
         catch (Exception e)
